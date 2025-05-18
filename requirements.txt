@@ -1,0 +1,17 @@
+slack_bolt
+slack_sdk
+requests
+python-dotenv
+sqlalchemy
+psycopg2-binary
+cryptography
+redis
+fastapi
+asyncio
+aiohttp
+uvicorn
+gunicorn
+httpx
+httpx[http2]
+openai
+jinja2

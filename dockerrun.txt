@@ -1,0 +1,11 @@
+docker run --name jira-postgres -e POSTGRES_USER=jira_user -e POSTGRES_PASSWORD=secure_pass -e POSTGRES_DB=jira_tokens -p 5432:5432 -d postgres
+
+python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+
+docker run --name jira-redis -p 6379:6379 -v redis-data:/data -d redis:latest redis-server --save 60 1 --loglevel warning --requirepass redis-pass
+
+docker-compose run --rm app python init_db.py
+
+docker-compose up --build -d
+
+docker-compose up -d

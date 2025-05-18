@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JiraMate Connected to Slack</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f4f5f7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      }
+      .emoji {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+      .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .subtext {
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .identify {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #777;
+      }
+      .button {
+        display: inline-block;
+        background-color: #4a154b;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .button:hover {
+        background-color: #3a0f3e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="emoji">🎉</div>
+      <div class="title">JiraMate is now connected to your Slack</div>
+      <div class="subtext">
+        You can close this window<br />or return to Slack.
+      </div>
+      <a
+        class="button"
+        href="https://slack.com/app_redirect?channel={{bot_id}}&tab=home"
+        >Return to Slack</a
+      >
+      <div class="identify">Logged in as {{display_name}}</div>
+    </div>
+  </body>
+</html>
