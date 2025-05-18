@@ -122,7 +122,6 @@ docker logs -f JiraMate
 
 - Tokens are **Fernet-encrypted** before storage
 - OAuth tokens cached in **Redis + memory**
-- Ensure `.env`, `*.db`, etc. are gitignored
 
 ---
 
