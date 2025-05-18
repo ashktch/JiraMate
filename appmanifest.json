@@ -1,0 +1,82 @@
+{
+  "display_information": {
+    "name": "JiraMate",
+    "description": "Create and summarize Jira tickets effortlessly with JiraMate, your AI-powered issue assistant.",
+    "background_color": "#000000",
+    "long_description": "JiraMate is an AI-powered Slack bot built to help teams at Capillary manage Jira tickets more efficiently — without leaving Slack.\r\n\r\nCreate tickets with interactive modals, attach files, mention teammates, and even summarize any existing issue using the `/summarize` command. JiraMate also prevents duplicates by showing AI-generated summaries of similar tickets before creation. Plus, with a dedicated Home tab and a built-in assistant in DMs, you can view, discuss, and understand Jira tickets in one seamless experience.\r\n\r\n🔹 Create and manage tickets from Slack\r\n🔹 Attach files and mention teammates in comments\r\n🔹 Summarize any ticket with /summarize\r\n🔹 Avoid duplicates with AI-powered suggestions\r\n🔹 View assigned and watched tickets in the Home tab\r\n🔹 Ask JiraMate about tickets directly in DMs"
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": false,
+      "messages_tab_read_only_enabled": false
+    },
+    "bot_user": {
+      "display_name": "JiraMate",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/createticket",
+        "url": "https://jiramate.ashktch.in/slack/events",
+        "description": "Create a new Jira Ticket",
+        "should_escape": false
+      },
+      {
+        "command": "/resetjira",
+        "url": "https://jiramate.ashktch.in/slack/events",
+        "description": "Admin Command",
+        "should_escape": false
+      },
+      {
+        "command": "/jiratoken",
+        "url": "https://jiramate.ashktch.in/slack/events",
+        "description": "Admin Command",
+        "should_escape": false
+      },
+      {
+        "command": "/refreshusers",
+        "url": "https://jiramate.ashktch.in/slack/events",
+        "description": "Admin Command",
+        "should_escape": false
+      },
+      {
+        "command": "/summarize",
+        "url": "https://jiramate.ashktch.in/slack/events",
+        "description": "Summarize a Ticket",
+        "usage_hint": "AT-123",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "chat:write",
+        "chat:write.public",
+        "commands",
+        "files:read",
+        "groups:read",
+        "groups:write",
+        "im:history",
+        "users:read",
+        "users:read.email",
+        "app_mentions:read"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://jiramate.ashktch.in/slack/events",
+      "bot_events": ["app_home_opened", "app_mention", "message.im"]
+    },
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://jiramate.ashktch.in/slack/events",
+      "message_menu_options_url": "https://jiramate.ashktch.in/slack/events"
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
