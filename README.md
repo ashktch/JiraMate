@@ -53,8 +53,17 @@
 git clone https://github.com/ashktch/jiramate.git
 cd jiramate
 ```
+### 2. Create a Slack App (via Manifest)
 
-### 2. Create a `.env` File
+1. Go to [https://api.slack.com/apps](https://api.slack.com/apps)
+2. Click **"Create New App"** → From manifest
+3. Select your workspace
+4. Paste the contents of [`appmanifest.json`](./appmanifest.json)
+5. After creating:
+   - Note your `SLACK_BOT_TOKEN` and `SLACK_SIGNING_SECRET`
+6. Install the app to your workspace
+
+### 3. Create a `.env` File
 
 ```env
 SLACK_BOT_TOKEN=xoxb-...
