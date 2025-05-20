@@ -58,7 +58,7 @@ cd jiramate
 1. Go to [https://api.slack.com/apps](https://api.slack.com/apps)
 2. Click **"Create New App"** → From manifest
 3. Select your workspace
-4. Paste the contents of [`appmanifest.json`](./appmanifest.json)
+4. Paste the contents of [`appmanifest.json`](./appmanifest.json) > _Make sure to replace all the links with your own endpoint._
 5. After creating:
    - Note your `SLACK_BOT_TOKEN` and `SLACK_SIGNING_SECRET`
 6. Install the app to your workspace
